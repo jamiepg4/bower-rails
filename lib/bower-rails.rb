@@ -40,7 +40,7 @@ module BowerRails
       def collect_tasks
         install_cmd = 'bower:install'
         install_cmd = 'bower:install:deployment' if @use_bower_install_deployment
-        install_cmd += '[-f]' if @force_install
+        install_cmd += '[-F]' if @force_install
 
         @tasks << [install_cmd] if @install_before_precompile
         @tasks << [install_cmd, 'bower:clean']   if @clean_before_precompile
