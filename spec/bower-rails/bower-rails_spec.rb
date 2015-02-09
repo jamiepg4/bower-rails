@@ -109,7 +109,7 @@ describe BowerRails do
           bower_rails.force_install = true
           bower_rails.install_before_precompile = true
         end
-        expect(BowerRails.tasks).to include('bower:install[-f]')
+        expect(BowerRails.tasks).to include('bower:install[-F]')
       end
 
       it 'calls bower install deployement with -f' do
@@ -118,7 +118,7 @@ describe BowerRails do
           bower_rails.use_bower_install_deployment = true
           bower_rails.install_before_precompile = true
         end
-        expect(BowerRails.tasks).to include('bower:install:deployment[-f]')
+        expect(BowerRails.tasks).to include('bower:install:deployment[-F]')
       end
     end
   end
